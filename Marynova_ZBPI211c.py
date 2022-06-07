@@ -363,5 +363,8 @@ class MyError(Exception):
         
         super(MyError, self).__init__(msg)
     
+    def __str__(self):
+        return self.msg
+    
     def get_msg(self):
         return self.__msg
