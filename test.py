@@ -157,7 +157,7 @@ def get_MyError(name):
 def test_username_MyError():
     """test for invalid username"""
     with pytest.raises(mar.MyError) as e:
-        assert get_MyError("Nick")
-        assert str(e.value) == "Username is properly set"
+        get_MyError("Nick")    
+    assert "So full of youth!" in str(e)
 
         
