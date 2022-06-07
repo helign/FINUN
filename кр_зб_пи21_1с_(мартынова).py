@@ -257,7 +257,7 @@ def substring_slice(path2file_1,path2file_2):
 #i think the check file is actually pushed right instead of left but this passes the "unit test"
 #like, 
 #if i write down "12345"[3-1:5] i will get 345 like down here
-print("12345"[3-1:5])
+#print("12345"[3-1:5])
 #so i think it should be [i-1:j]
 
 """#8
