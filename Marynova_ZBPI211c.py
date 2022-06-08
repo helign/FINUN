@@ -111,7 +111,10 @@ def is_palindrome(string):
             pal = False
         i += 1
         j -= 1
-    return pal
+    if pal == True:
+        return "YES"
+    else:
+        return "NO"
 
 """# 6
 Написать функцию ```calculate```, которая принимает на вход текстовый файл содержащий строки следующего формата:
@@ -324,11 +327,11 @@ def decode_ch(sting_of_elements):
 
 class Student:
     def __init__(self, name, surname, grades=[3,4,5]):
-        self.__name = name
-        self.__surname = surname
-        self.__fullname = name + ' ' + surname
-        self.__grades = grades
-    
+        self.name = name
+        self.surname = surname
+        self.fullname = name + ' ' + surname
+        self.grades = grades
+        
     def greeting(self):
         return ("Hello, I am Student")
 
