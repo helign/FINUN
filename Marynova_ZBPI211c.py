@@ -362,12 +362,12 @@ class Student:
 
 class MyError(Exception):
     def __init__(self, msg):
-        self.__msg = msg
+        self.msg = msg
         
         super(MyError, self).__init__(msg)
         
     def __str__(self):
-        return self.__msg
+        return self.msg
     
     def get_msg(self):
-        return self.__msg
+        return self.msg
