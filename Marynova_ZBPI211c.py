@@ -336,7 +336,7 @@ class Student:
         return ("Hello, I am Student")
 
     def mean_grade(self):
-        return sum(self.__grades)/len(self.__grades)
+        return sum(self.grades)/len(self.grades)
     
     def is_otlichnik(self):
         if self.mean_grade()>=4.5:
@@ -345,10 +345,10 @@ class Student:
             return "NO"
     #magic
     def __add__(self, other):
-        return (self.__name + " is friends with " + other.__name)
+        return (self.name + " is friends with " + other.name)
     
     def __str__(self):
-        return self.__fullname
+        return self.fullname
 
 """#10
 
