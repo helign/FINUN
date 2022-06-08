@@ -60,50 +60,24 @@ def test_bin_search_not_found():
     
 #TEST 5
 
-def palindrome_number_generator():
-    yield 0    
-    lower = 1
-    while True:
-        higher = lower*10
-        for i in range(lower, higher):    
-            s = str(i)
-            yield int(s+s[-2::-1])
-        for i in range(lower, higher):    
-            s = str(i)
-            yield int(s+s[::-1])
-        lower = higher
-
-
-def palindromes(lower, upper):
-    all_palindrome_numbers = palindrome_number_generator()
-    for p in all_palindrome_numbers:
-        if p >= lower:
-            break
-    palindrome_list = [p]
-    for p in all_palindrome_numbers:
-        if p >= upper:
-            break
-        palindrome_list.append(p)
-    return palindrome_list
-
-TEST_PALINDROME = palindromes(121,454)
+TEST_PALINDROME = ["Ежу хуже", "Лев осовел", "Зона заноз", "Неуч учуен", "Утоп в поту", "Шику кукиш", "Болвана в лоб", "Да, гневен гад", "Маска как сам", "Чем нежен меч", "Мат и тут и там", "Там холм лохмат", "Вид усов осудив", "Кот, сука, за кусток", "Уверена я, а не реву", "Цени в себе свинец", "Отлично кончил-то", "Кошмар, срам, шок", "Милашка, как шалим", "Нахапал фуфла пахан", "А вот и харя рахитова", "Акт у нимф - минутка", "Аргентина манит негра", "Потенция - яиц нет, оп", "Коту скоро сорок суток", "Лидер Венере не вредил", "Замучен он, но не чумаз", "А леди у ног его - ну и дела", "А роза упала на лапу Азора"]
 
 @pytest.mark.parametrize("test_lists",TEST_PALINDROME)
 def test_is_palindrome(test_lists):
     output = mar.is_palindrome(str(test_lists))
-    assert output == True
+    assert output == "YES"
     
 def test_is_palindrome_punctuation():
     output = mar.is_palindrome("Madam, I'm Adam")
-    assert output == True
+    assert output == "YES"
     
 def test_is_palindrome_case():
     output = mar.is_palindrome("А роза упала на лапу Азора")
-    assert output == True
+    assert output == "YES"
     
 def test_is_palindrome_not():
     output = mar.is_palindrome("Some Text That Is not Palindrome")
-    assert output == False
+    assert output == "NO"
     
 #TEST 6
 
